@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Design Mode Switcher",
+  "version": "1.0.0",
+  "description": "Allows to switch design mode",
+  "icons": {
+    "32": "icons/off.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["index.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": {
+      "32": "icons/off.png"
+    }
+  }
+}
